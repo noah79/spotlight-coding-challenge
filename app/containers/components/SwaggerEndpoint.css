@@ -1,0 +1,22 @@
+.root {
+	display:flex;
+	padding: 1em;
+}
+
+.path {
+	font-weight:bold;
+}
+
+.verbs {
+	display: flex;
+	flex-direction: row;
+	margin: 0 1em;
+
+	> * {
+		margin-right:.5em;
+	}
+}
+
+.verb {
+	text-transform: uppercase;
+}

@@ -1,6 +1,5 @@
 const path = require('path');
 const webpack = require('webpack');
-const postCSSConfig = require('./postcss.config');
 
 const host = 'localhost';
 const port = 3000;
@@ -29,9 +28,6 @@ const baseDevConfig = () => ({
 		filename:      '[name].bundle.js',
 		chunkFilename: '[id].chunk.js',
 	},
-	postcss() {
-		return postCSSConfig;
-	},
 	plugins:       [
 		new webpack.HotModuleReplacementPlugin(),
 		new webpack.NoErrorsPlugin(),
@@ -53,17 +49,18 @@ const baseDevConfig = () => ({
 	module:        {
 		loaders: [
 			{
-				test:    /\.js$/,
+				test:    /\.(js|jsx)$/,
 				loader:  'babel',
 				query:   {
 					cacheDirectory: true,
 					plugins:        ['transform-decorators-legacy'],
-					presets:        ['es2015', 'stage-0', 'react', 'react-hmre']
+					presets:        ['env', 'es2015', 'stage-0', 'react', 'react-hmre']
 				},
 				exclude: /node_modules/,
 			},
 			{
 				test:    /\.css$/,
+				exclude: ['/node_modules/'],
 				loaders: [
 					'style',
 					'css?modules&sourceMap&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]',

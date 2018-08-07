@@ -27,8 +27,11 @@
     "eslint-plugin-prettier": "2.1.x",
     "eslint-plugin-react": "7.x.x",
     "extract-text-webpack-plugin": "^1.0.1",
+    "postcss": "^6.0.22",
+    "postcss-loader": "^2.1.5",
+    "postcss-nested": "^3.0.0",
     "prettier": "^1.5.3",
-    "postcss-loader": "^1.2.1",
+    "regenerator-runtime": "^0.12.1",
     "shelljs": "^0.7.0",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.0",
@@ -36,8 +39,15 @@
     "webpack-httpolyglot-server": "^0.2.0"
   },
   "dependencies": {
+    "@blueprintjs/core": "^3.2.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "lodash": "^4.17.10",
+    "mobx": "^5.0.3",
+    "mobx-react": "^5.2.3",
     "react": "16.4.0",
     "react-dom": "16.4.0",
+    "react-json-view": "^1.19.1",
     "react-redux": "5.0.7",
     "redux": "4.0.0",
     "redux-thunk": "2.3.0"
